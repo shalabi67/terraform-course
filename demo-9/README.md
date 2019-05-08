@@ -19,4 +19,10 @@ terraform apply
 
 ###ssh to instance
 ssh -i mykey -l ubuntu ipaddrress
+sudo -s
+df -h
+
+you will see volume
+
+
 
