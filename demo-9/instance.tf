@@ -13,7 +13,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_ebs_volume" "ebs-volume-1" {
-    availability_zone = "eu-west-1a"
+    availability_zone = "${var.AWS_REGION}a"
     size = 20
     type = "gp2" 
     tags {
@@ -22,6 +22,7 @@ resource "aws_ebs_volume" "ebs-volume-1" {
 }
 
 resource "aws_volume_attachment" "ebs-volume-1-attachment" {
+  #volume name on the instance
   device_name = "/dev/xvdh"
   volume_id = "${aws_ebs_volume.ebs-volume-1.id}"
   instance_id = "${aws_instance.example.id}"

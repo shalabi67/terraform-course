@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "b" {
-    bucket = "mybucket-c29df1"
+    bucket = "shalabi-mybucket-c29df1"
     acl = "private"
 
     tags {
-        Name = "mybucket-c29df1"
+        Name = "shalabi-mybucket-c29df1"
     }
 }
