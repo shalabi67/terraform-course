@@ -7,6 +7,7 @@ resource "aws_elastic_beanstalk_environment" "app-prod" {
   name = "app-prod"
   application = "${aws_elastic_beanstalk_application.app.name}"
   #To identify list of available stack names: aws elasticbeanstalk list-available-solution-stacks
+  # 64bit Amazon Linux 2018.03 v2.8.3 running Java 8
   solution_stack_name = "64bit Amazon Linux 2018.03 v2.8.9 running PHP 7.2"
   setting {
     namespace = "aws:ec2:vpc"
